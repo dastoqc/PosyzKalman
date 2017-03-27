@@ -9,8 +9,8 @@
   of the Pozyx device both locally and remotely. Follow the steps to correctly set up your environment in the link, change the
   parameters and upload this sketch. Watch the coordinates change as you move your device around!
 */
-#include <../../Pozyx.h>
-#include <../../Pozyx_definitions.h>
+#include <Pozyx.h>
+#include <Pozyx_definitions.h>
 #include <Wire.h>
 
 ////////////////////////////////////////////////

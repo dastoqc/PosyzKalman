@@ -160,8 +160,8 @@ int PozyxClass::begin(boolean print_result, int mode, int interrupts, int interr
     // Arduino UNO, Mega
     attachInterrupt(interrupt_pin, IRQ, RISING);
 #else
-    Serial.print("This is not a board supported by Pozyx, interrupts may not work, pin:");
-    Serial.println(interrupt_pin);
+Serial.print("This is not a board supported by Pozyx, interrupts may not work, pin:");
+Serial.println(interrupt_pin);
     attachInterrupt(digitalPinToInterrupt(interrupt_pin), IRQ, RISING);
 #endif
 
