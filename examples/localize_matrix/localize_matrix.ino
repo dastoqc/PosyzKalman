@@ -1,13 +1,12 @@
 // Please read the ready-to-localize tuturial together with this example.
 // https://www.pozyx.io/Documentation/Tutorials/ready_to_localize
 /**
-  The Pozyx ready to localize tutorial (c) Pozyx Labs
+  This file is greatly inspired by the Poxyz 'ready_to_lcalize' example.
 
   Please read the tutorial that accompanies this sketch: https://www.pozyx.io/Documentation/Tutorials/ready_to_localize/Arduino
 
-  This tutorial requires at least the contents of the Pozyx Ready to Localize kit. It demonstrates the positioning capabilities
-  of the Pozyx device both locally and remotely. Follow the steps to correctly set up your environment in the link, change the
-  parameters and upload this sketch. Watch the coordinates change as you move your device around!
+  by David St-Onge, 2017
+  
 */
 #include <Pozyx.h>
 #include <Pozyx_definitions.h>
@@ -147,6 +146,12 @@ void loop() {
     // prints out the error code
     printErrorCode("sensor");
   }
+
+  playfile(getGridIndex(Kalposition), 0);
+}
+
+void playfile(int id, int level) {
+  Serial.print("Should play file ");Serial.println(id);
 }
 
 void initKalman(sensor_raw_t sensor_raw, coordinates_t coor) {
